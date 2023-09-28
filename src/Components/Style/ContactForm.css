@@ -1,0 +1,103 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 30px !important;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #bae4b6a3;
+}
+
+h1 {
+  text-align: center;
+  color: #0f1011;
+}
+
+div[class="first-name"],
+div[class="last-name"],
+div[class="address"],
+div[class="phone"] {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+input[type="email"]:focus {
+  border: 3px solid #555;
+}
+textarea:focus {
+  border: 3px solid #555;
+}
+input[type="number"]:focus {
+  border: 3px solid #555;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.submit-button {
+  text-align: center;
+}
+.card-container{
+    /* display: flex; */
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.card {
+  width: 18rem !important;
+  position: relative;
+  background-color: #c597b9;
+  margin: 70px;
+}
+
+.card-img-top {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid grey;
+  top: 10px;
+  right: 10px;
+}
+
+.card-text{
+    margin-top: 70px;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important; */
+    font-weight: 500;
+}
+
+
