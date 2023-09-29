@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Style/ContactForm.css";
+import image from "./Style/myImage.png";
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -23,6 +24,18 @@ const ContactForm = () => {
   const phoneNumberFn = (e) => {
     setPhoneNumber(e.target.value);
   };
+
+  const removeCard = (index) => {
+    const updatedData = submittedData.slice();
+    updatedData.splice(index, 1);
+    setsubmittedData(updatedData);
+  };
+
+  // const removeCard = (index) => {
+  //   const updatedData = submittedData.filter((item, i) => i !== index);
+  //   console.log({ updatedData });
+  //   setsubmittedData(updatedData);
+  // };
   const SubmitData = (e) => {
     e.preventDefault();
     let dataobj = {
@@ -88,16 +101,23 @@ const ContactForm = () => {
         </form>
       </div>
       <div className="card-container">
-        {submittedData.map((item) => {
+        {submittedData.map((item, index) => {
           return (
             <>
               <div class="card">
+                <div className="cross-icon">
+                  <img
+                    src={image}
+                    onClick={() => removeCard(index)}
+                    className="cross-icon-image"
+                  />
+                </div>
                 <img
                   src="https://hiteshchoudhary.com/static/a8d73d1aac4c79e9bb689640e6090367/2eaab/person-image.jpg"
                   className="card-img-top"
                 />
                 <div className="card-body">
-                    <h4>User Data:1</h4>
+                  <h4>User Data:1</h4>
                   <p className="card-text">
                     First Name: {item.firstname}
                     <br />
