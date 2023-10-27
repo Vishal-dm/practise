@@ -15,7 +15,7 @@ const ContactForm = () => {
   const lName = (e) => {
     setLastName(e.target.value);
   };
-  const addressFn = (e) => {
+  const addressFn = (e) => { 
     setAddress(e.target.value);
   };
   const emailFn = (e) => {
@@ -31,11 +31,12 @@ const ContactForm = () => {
     setsubmittedData(updatedData);
   };
 
-  // const removeCard = (index) => {
+  // const removeCard = (index) =>  {
   //   const updatedData = submittedData.filter((item, i) => i !== index);
   //   console.log({ updatedData });
   //   setsubmittedData(updatedData);
   // };
+
   const SubmitData = (e) => {
     e.preventDefault();
     let dataobj = {
@@ -48,7 +49,7 @@ const ContactForm = () => {
     setsubmittedData([...submittedData, dataobj]);
     setFirstName("");
     setLastName("");
-    setAddress("");
+    setAddress("");       
     setEmail("");
     setPhoneNumber("");
   };
